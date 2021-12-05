@@ -1,7 +1,9 @@
 {
-  "endOfLine": "lf",
-  "semi": true,
-  "singleQuote": false,
-  "tabWidth": 2,
-  "trailingComma": "es5"
+  "singleQuote": true,
+  "useTabs": true,
+  "printWidth": 80,
+  "jsxBracketSameLine": false,
+  "editor.formatOnSave": true,
+  "arrowParens": "always",
+  "trailingComma": "all"
 }
