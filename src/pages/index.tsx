@@ -1,16 +1,20 @@
-import { Box } from "@chakra-ui/react";
-
-import CTASection from "components/CTASection";
-import SomeImage from "components/SomeImage";
-import SomeText from "components/SomeText";
+import { Flex, Heading, Text } from '@chakra-ui/react';
 
 const Home = () => {
 	return (
-		<Box mb={8} w="full">
-			<SomeText />
-			<SomeImage />
-			<CTASection />
-		</Box>
+		<Flex
+			direction="column"
+			justifyContent="center"
+			mb={8}
+			w="full"
+			h="calc(100vh - 204px)"
+		>
+			<Heading>Hello, I'm Diner</Heading>
+			<Text mt={4} fontSize="xl" maxW="500px">
+				I'm a web developer working on projects that make the world a
+				better place.
+			</Text>
+		</Flex>
 	);
 };
 

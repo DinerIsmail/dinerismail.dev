@@ -1,1 +1,26 @@
-/* Global Styling here */
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none !important;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}

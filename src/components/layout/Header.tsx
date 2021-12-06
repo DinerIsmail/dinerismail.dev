@@ -1,18 +1,20 @@
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import ThemeToggle from './ThemeToggle';
+import Nav from '../nav';
 
 const Header = () => {
 	return (
-		<Flex as="header" width="full" align="center">
+		<Flex
+			as="header"
+			width="full"
+			align="center"
+			justifyContent="space-between"
+		>
 			<Heading as="h1" size="md">
-				<Link href="/">nextarter-chakra</Link>
+				<Link href="/">dinerismail.dev</Link>
 			</Heading>
-
-			<Box marginLeft="auto">
-				<ThemeToggle />
-			</Box>
+			<Nav />
 		</Flex>
 	);
 };

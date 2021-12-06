@@ -1,0 +1,15 @@
+.root {
+	p {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		margin-bottom: 0.5rem;
+	}
+
+	a {
+		font-weight: 700;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
