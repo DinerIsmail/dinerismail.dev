@@ -1,5 +1,8 @@
-import { chakra, HTMLChakraProps } from '@chakra-ui/react';
-import { motion, HTMLMotionProps } from 'framer-motion';
+import React from 'react';
+import { chakra } from '@chakra-ui/react';
+import type { HTMLChakraProps } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import type { HTMLMotionProps } from 'framer-motion';
 
 import { Merge } from 'types/merge';
 
