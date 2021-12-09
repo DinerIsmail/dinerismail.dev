@@ -25,6 +25,7 @@ const MyApp = ({
 	pageProps,
 	emotionCache = clientSideEmotionCache,
 }: MyAppProps) => {
+	console.log(customTheme)
 	return (
 		<CacheProvider value={emotionCache}>
 			<ChakraProvider theme={customTheme}>
