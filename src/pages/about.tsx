@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from '@chakra-ui/react';
+import { Flex, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 import { GraphQLClient } from 'graphql-request';
 import ReactMarkdown from 'react-markdown';
 
@@ -13,10 +13,9 @@ const About = ({
 	return (
 		<Flex
 			direction="column"
-			justifyContent="center"
 			mb={8}
-			w="full"
-			h="calc(100vh - 204px)"
+			mt={12}
+			h={useBreakpointValue({ base: 'initial', md: 'calc(100vh - 204px)' })}
 		>
 			<Heading>{page.title}</Heading>
 			<Text mt={4} fontSize="xl">
