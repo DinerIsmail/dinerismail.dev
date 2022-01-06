@@ -9,10 +9,10 @@ import '@fontsource/lexend/latin.css';
 import '@fontsource/recursive';
 
 import defaultSEOConfig from '../../next-seo.config';
-import Layout from 'components/layout';
-import createEmotionCache from 'styles/createEmotionCache';
-import customTheme from 'styles/customTheme';
-import 'styles/globals.css';
+import Layout from '../components/layout';
+import createEmotionCache from '../styles/createEmotionCache';
+import customTheme from '../styles/customTheme';
+import '../styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();
 

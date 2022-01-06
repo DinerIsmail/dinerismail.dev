@@ -1,4 +1,4 @@
-import { ColorModeScript } from '@chakra-ui/react'
+import { ColorModeScript } from '@chakra-ui/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, {
 	Html,
@@ -9,8 +9,8 @@ import Document, {
 } from 'next/document';
 import * as React from 'react';
 
-import customTheme from 'styles/customTheme';
-import createEmotionCache from 'styles/createEmotionCache';
+import customTheme from '../styles/customTheme';
+import createEmotionCache from '../styles/createEmotionCache';
 
 const APP_NAME = 'dinerismail.dev';
 
@@ -73,7 +73,9 @@ class MyDocument extends Document {
 					<link rel="manifest" href="/manifest.json" />
 				</Head>
 				<body>
-					<ColorModeScript initialColorMode={customTheme.config.initialColorMode} />
+					<ColorModeScript
+						initialColorMode={customTheme.config.initialColorMode}
+					/>
 					<Main />
 					<NextScript />
 				</body>

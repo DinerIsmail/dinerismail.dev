@@ -11,8 +11,8 @@ const Home = () => {
 		>
 			<Heading>Hello, I'm Diner</Heading>
 			<Text mt={4} fontSize="xl" maxW="500px">
-				I'm a web developer working on projects that make the world a
-				better place.
+				I'm a web developer working on projects that make the world a better
+				place.
 			</Text>
 		</Flex>
 	);

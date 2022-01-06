@@ -19,7 +19,9 @@ const About = ({
 		>
 			<Heading>{page.title}</Heading>
 			<Text mt={4} fontSize="xl">
-				<ReactMarkdown linkTarget="_blank">{page.content.markdown}</ReactMarkdown>
+				<ReactMarkdown linkTarget="_blank">
+					{page.content.markdown}
+				</ReactMarkdown>
 			</Text>
 		</Flex>
 	);

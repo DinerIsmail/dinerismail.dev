@@ -13,5 +13,10 @@ module.exports = withPWA({
 		dest: 'public',
 		register: true,
 	},
+	images: {
+		domains: ['media.graphcms.com'],
+		formats: ['image/avif', 'image/webp'],
+	},
 	reactStrictMode: true,
+	swcMinify: true,
 });
