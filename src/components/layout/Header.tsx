@@ -12,7 +12,7 @@ const Header = () => {
 			justifyContent="space-between"
 		>
 			<Heading as="h1" size="md">
-				<Link href="/">dinerismail.dev</Link>
+				<Link href="/">Diner Ismail</Link>
 			</Heading>
 			<Nav />
 		</Flex>
