@@ -1,16 +1,6 @@
-import Image from 'next/image';
-import NextLink from 'next/link';
+import { memo } from 'react';
 import { GraphQLClient } from 'graphql-request';
-import {
-	Box,
-	Grid,
-	Heading,
-	Text,
-	Stack,
-	useBreakpointValue,
-	Link,
-	Flex,
-} from '@chakra-ui/react';
+import { Grid, useBreakpointValue, Flex } from '@chakra-ui/react';
 import Card from '../components/projects/card';
 
 interface IProject {
@@ -24,7 +14,6 @@ interface IProject {
 }
 
 const Projects = ({ projects }: { projects: IProject[] }) => {
-	console.log(projects);
 	return (
 		<Flex
 			direction="column"
@@ -77,4 +66,4 @@ export async function getStaticProps() {
 	};
 }
 
-export default Projects;
+export default memo(Projects);

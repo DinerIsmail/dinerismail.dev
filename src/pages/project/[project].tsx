@@ -8,13 +8,20 @@ import { Box, Heading, Flex, useBreakpointValue } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 import { NextSeo } from 'next-seo';
 
-// import LayoutContainer from '@components/layout-container';
-// import styles from './post.module.scss';
+interface IProject {
+	title: string;
+	excerpt: string;
+	image: {
+		url: string;
+	};
+	content?: {
+		markdown: string;
+	};
+	notFound?: boolean;
+}
 
-const Project = ({ project }) => {
+const Project = ({ project }: { project: IProject }) => {
 	const router = useRouter();
-
-	console.log(project);
 
 	const boxBreakpointValue = useBreakpointValue({ base: '90%', md: '650px' });
 
@@ -111,7 +118,9 @@ export async function getStaticPaths() {
 		}
 	}`);
 
-	const paths = projects.map(({ project }) => `/project/${project}`);
+	const paths = projects.map(
+		({ project }: { project: IProject }) => `/project/${project}`,
+	);
 
 	return {
 		paths,
