@@ -4,7 +4,6 @@ import {
 	chakra,
 	Box,
 	Image,
-	Flex,
 	useColorModeValue,
 	useBreakpointValue,
 	Link,

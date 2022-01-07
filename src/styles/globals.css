@@ -24,3 +24,18 @@ strong {
 em {
 	font-style: italic;
 }
+
+@media (max-width: 699px) {
+	.page-content img {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 700px) {
+	.page-content img {
+		float: left;
+		margin-right: 1rem;
+		margin-bottom: 0.75rem;
+	}
+}
