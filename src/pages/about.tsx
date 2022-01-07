@@ -13,7 +13,6 @@ const About = ({
 }) => {
 	return (
 		<Flex direction="column" mb={8} mt={12}>
-			<Heading>{page.title}</Heading>
 			<Text mt={4} fontSize="xl">
 				<ReactMarkdown className="page-content" linkTarget="_blank">
 					{page.content.markdown}
