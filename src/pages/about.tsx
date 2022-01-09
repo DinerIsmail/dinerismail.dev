@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Flex, Heading, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import { GraphQLClient } from 'graphql-request';
 import ReactMarkdown from 'react-markdown';
 

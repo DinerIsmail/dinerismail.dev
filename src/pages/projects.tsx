@@ -15,12 +15,7 @@ interface IProject {
 
 const Projects = ({ projects }: { projects: IProject[] }) => {
 	return (
-		<Flex
-			direction="column"
-			mb={8}
-			mt={12}
-			h={useBreakpointValue({ base: 'initial', md: 'calc(100vh - 204px)' })}
-		>
+		<Flex direction="column" mb={8} mt={12}>
 			<Grid
 				templateColumns={useBreakpointValue({
 					base: 'repeat(1, 1fr)',
