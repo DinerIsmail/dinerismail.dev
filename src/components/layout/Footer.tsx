@@ -1,5 +1,6 @@
 import { Flex, Text, IconButton, HStack, Link } from '@chakra-ui/react';
 import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
+import { MdEmail } from 'react-icons/md';
 
 const Footer = () => {
 	return (
@@ -10,6 +11,7 @@ const Footer = () => {
 					<IconButton
 						variant="ghost"
 						aria-label="Github link"
+						fontSize="32px"
 						icon={<AiFillGithub />}
 					/>
 				</Link>
@@ -17,7 +19,16 @@ const Footer = () => {
 					<IconButton
 						variant="ghost"
 						aria-label="Twitter link"
+						fontSize="32px"
 						icon={<AiOutlineTwitter />}
+					/>
+				</Link>
+				<Link href="mailto:ismail.diner@gmail.com" isExternal>
+					<IconButton
+						variant="ghost"
+						aria-label="Email link"
+						fontSize="32px"
+						icon={<MdEmail />}
 					/>
 				</Link>
 			</HStack>
