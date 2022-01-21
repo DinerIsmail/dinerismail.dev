@@ -5,7 +5,14 @@
 		"es6": true,
 		"node": true
 	},
-	"plugins": ["react", "react-hooks", "import", "jsx-a11y", "sonarjs", "prettier"],
+	"plugins": [
+		"react",
+		"react-hooks",
+		"import",
+		"jsx-a11y",
+		"sonarjs",
+		"prettier"
+	],
 	"extends": [
 		"eslint:recommended",
 		"plugin:import/recommended",
@@ -27,9 +34,7 @@
 	"settings": {
 		"import/resolver": {
 			"alias": {
-				"map": [
-					["@components", "./components/"]
-				],
+				"map": [["@components", "./components/"]],
 				"extensions": [".js", ".jsx", ".tsx", ".ts"]
 			}
 		},
@@ -55,7 +60,7 @@
 		"no-var": 1,
 		"no-mixed-spaces-and-tabs": 1,
 		"prefer-const": 1,
-		"prettier/prettier": 1,
+		"prettier/prettier": 0,
 		"quotes": [
 			2,
 			"single",
