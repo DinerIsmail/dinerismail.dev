@@ -7,11 +7,15 @@ import { GraphQLClient } from 'graphql-request';
 import { Box, Heading, Flex, useBreakpointValue } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 import { NextSeo } from 'next-seo';
+import { useMemo } from 'react';
 
 interface IProject {
 	title: string;
 	excerpt: string;
 	image: {
+		url: string;
+	};
+	imageMobile: {
 		url: string;
 	};
 	content?: {
@@ -23,7 +27,16 @@ interface IProject {
 const Project = ({ project }: { project: IProject }) => {
 	const router = useRouter();
 
-	const boxBreakpointValue = useBreakpointValue({ base: '90%', md: '650px' });
+	const boxBreakpointValue = useBreakpointValue({ base: '100%', md: '650px' });
+	const isMobile = useBreakpointValue({ base: true, md: false });
+
+	const image = useMemo(
+		() =>
+			isMobile && project?.imageMobile
+				? project?.imageMobile?.url
+				: project?.image?.url,
+		[isMobile, project?.image?.url, project?.imageMobile],
+	);
 
 	if (router.isFallback) {
 		return <h1>Please wait…</h1>;
@@ -39,6 +52,8 @@ const Project = ({ project }: { project: IProject }) => {
 			</>
 		);
 	}
+
+	console.log(project);
 
 	return (
 		<>
@@ -59,7 +74,7 @@ const Project = ({ project }: { project: IProject }) => {
 						<Box h={'350px'} bg={'gray.100'} mb={6} pos={'relative'}>
 							<Image
 								alt="Project cover image"
-								src={project.image?.url}
+								src={image}
 								layout="fill"
 								objectFit="cover"
 							/>
@@ -89,6 +104,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 						markdown
 					}
 					image {
+						url
+					}
+					imageMobile {
 						url
 					}
 				}
