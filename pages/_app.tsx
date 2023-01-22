@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app'
+import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import { NextSeo } from 'next-seo'
 import 'cal-sans'
@@ -36,6 +37,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           ],
         }}
       />
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
