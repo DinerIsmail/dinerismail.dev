@@ -4,7 +4,6 @@ import Hero from '@/components/hero'
 import { getRecentBlogPosts } from '@/utils/get-blog-posts'
 import { BlogPost } from '@/types/blog-post'
 import BlogpostsSection from '@/components/blogposts-section'
-import ProjectsSection from '@/components/projects-section'
 
 type Props = {
   posts: BlogPost[]
