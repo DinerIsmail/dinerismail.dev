@@ -6,13 +6,13 @@ const moduleExports = {
   async redirects() {
     return [
       {
-        source: '/discord',
-        destination: 'https://discord.gg/qCPwSQdtPu',
+        source: '/github',
+        destination: 'https://github.com/dinerismail',
         permanent: true,
       },
       {
         source: '/twitter',
-        destination: 'https://twitter.com/DinerIsmail',
+        destination: 'https://twitter.com/dinerismail',
         permanent: true,
       },
     ]
