@@ -1,0 +1,64 @@
+---
+title: The Power of Component Composition in React
+description: How to leverage composition and create flexible and resilient components
+date: January 27, 2023
+---
+
+One of the most challenging problems in building a complex web application is how we structure our code. Since the dawn of React, the main way of encapsulating logic and functionality became the component model. More recently, that idea has even spread to other frameworks and libraries.
+
+Let's say we want to create a component based on the following design:
+<img src="/assets/images/blog-posts/react-power-of-composition/example1.png" alt="Component example 1" width="60%" />
+
+Straightforward enough, right? Let's jump in and build it and make everything configurable via props, as we checked with the designer and they said there will be lots of similar components in other places 🤓
+```jsx
+<SmallCardWithButton
+  title="Sign up a Business!"
+  subtitle="No slots available near you? No Problem!"
+  description="A great way you can help to bring more available slots to people in your area is to encourage a business to sign up to Olio."
+  buttonText="Guide to Signing Up Businesses"
+  buttonLink="/guide-signing-up-businesses"
+  icon={<Icon />}
+/>
+```
+
+A week later, for a separate ticket, the designer proudly shows you the design for a new component, which they say is very similar to the previous one 😀
+<img src="/assets/images/blog-posts/react-power-of-composition/example2.png" alt="Component example 2" width="60%" />
+
+Let's go ahead and do it. As you can see due to the button being different, we had to add an extra `buttonSecondary` prop.
+```jsx
+<SmallCardWithButton
+  title="How to share food"
+  description="We've got you covered when it comes to what you need to know and do when sharing food."
+  buttonText="View how to share food FAQ"
+  buttonLink="/share-food-faq"
+  buttonSecondary
+  icon={<Icon />}
+/>
+```
+
+Simple enough for now, but let's push this further.
+- What if we need a card that has the icon on the left - would we add an `iconLeft` prop, or even create a whole separate component?
+- What if the button should do an action on click - do we add an `onClick` prop and add logic inside the component and handle both cases?
+
+We would quickly end up with a very complicated component, with dozens of props and lots of usages to cater for. Additionally, we should keep in mind that everytime we are handling a new use case we are modifying the component, introducing risk everywhere that component is used. There is another approach, however, and that is component composition.
+
+## What is Component Composition?
+
+In simple terms, it just means composing components together to form other components. In practical terms, this is mainly achieved by using the `children` prop. I believe this is a feature of React that is underused, although it enables us to create flexible components that are delightful to use.
+
+Before we get into the component internals, here's a way that the new component API can look instead:
+
+```jsx
+<Card size="small" icon={<Icon />}>
+  <CardTitle>How to share food</CardTitle>
+  <CardDescription>
+    We've got you covered when it comes to what you need to know and do when sharing food.
+  </CardDescription>
+  <Button href="/share-food-faq">View how to share food FAQ</Button>
+</Card>
+```
+
+This opens up a lot of options. We can now have a button with an `onClick` action and style it differently. Or we can have card without an icon. Of course this example is a bit contrived, but this same principle can be applied for more complex components. It's worth noting that 
+
+## Inversion of Control
+
