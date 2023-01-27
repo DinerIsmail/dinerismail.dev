@@ -77,7 +77,6 @@ const BlogPostPage = ({
           </HStack>
         </VStack>
         <MDXRemote {...source} components={MDXComponents} />
-        <Divider />
       </VStack>
       <ScrollToTopButton />
     </>

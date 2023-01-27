@@ -73,7 +73,7 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
     )
   }
   language = language.replace('language-', '')
-  const showLineNumbers = !['shell', 'text'].includes(language)
+  const showLineNumbers = false // !['shell', 'text'].includes(language)
 
   return (
     <ChakraHighlight
@@ -198,12 +198,12 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: (props) => <chakra.p apply="mdx.p" {...props} fontSize="1.25rem" />,
+  p: (props) => <chakra.p apply="mdx.p" fontSize="1.125rem" {...props} />,
   ul: (props) => (
     <chakra.ul px={{ base: 4, md: 0 }} apply="mdx.ul" {...props} />
   ),
   ol: (props) => <chakra.ol apply="mdx.ul" {...props} />,
-  li: (props) => <chakra.li pb="4px" {...props} />,
+  li: (props) => <chakra.li pb="4px" fontSize="1.125rem" {...props} />,
   blockquote: (props) => (
     <Box>
       <Alert
