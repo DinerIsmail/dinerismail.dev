@@ -52,7 +52,7 @@ const Hero = () => {
           <HeroPlay />
         </Stack>
         <Text as="h2" lineHeight="175%">
-          I’m a frontend developer, activist, and vegan foodie. I work at{' '}
+          I’m a frontend developer, activist, and amateur gardener. I work at{' '}
           <ExternalLink href="https://olioex.com">Olio</ExternalLink> as a{' '}
           <strong>Software Engineer</strong>, and I’m a{' '}
           <strong>co-founder and developer</strong> of{' '}
