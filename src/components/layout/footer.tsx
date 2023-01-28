@@ -1,16 +1,6 @@
 import Image from 'next/image'
-import {
-  chakra,
-  Stack,
-  HStack,
-  VStack,
-  Divider,
-  Link,
-  Text,
-} from '@chakra-ui/react'
+import { chakra, Stack, HStack, VStack, Divider, Text } from '@chakra-ui/react'
 
-import { TWITTER_PROFILE, GITHUB_PROFILE } from '../../constants'
-import { Link as LinkType } from '@/types/link'
 import VercelCallout from '../vercel-callout'
 
 const Footer = () => {

@@ -12,7 +12,6 @@ const HeroImage = () => {
             src="/assets/images/diner.jpg"
             width={224}
             height={224}
-            objectFit="contain"
           />
         </Box>
       </AspectRatio>
