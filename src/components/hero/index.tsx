@@ -52,16 +52,14 @@ const Hero = () => {
           <HeroPlay />
         </Stack>
         <Text as="h2" lineHeight="175%">
-          I’m a frontend developer, activist, and amateur gardener. I work at{' '}
-          <ExternalLink href="https://olioex.com">Olio</ExternalLink> as a{' '}
-          <strong>Software Engineer</strong>, and I’m a{' '}
+          I’m a frontend developer building products that make the world better.
+          I work at <ExternalLink href="https://olioex.com">Olio</ExternalLink>{' '}
+          as a <strong>Software Engineer</strong>, and I’m a{' '}
           <strong>co-founder and developer</strong> of{' '}
           <ExternalLink href="https://resilienceweb.org.uk">
             Resilience Web
           </ExternalLink>
-          . I’m also a{' '}
-          <ExternalLink href="https://codementor.io">CodeMentor</ExternalLink>{' '}
-          <strong>tutor</strong>.
+          .
         </Text>
         <Stack direction={{ base: 'column', md: 'row' }} spacing={3}>
           {socialLinks.map(({ href, label, color }) => (
