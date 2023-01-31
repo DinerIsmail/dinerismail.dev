@@ -6,7 +6,9 @@ date: January 27, 2023
 
 One of the most challenging problems in building a complex web application is how we structure our code. Since the dawn of React, the main way of encapsulating logic and functionality became the component model. More recently, that idea has even spread to other frameworks and libraries.
 
-Before we get to React, here's a code snippet, I'd like to know what you think is interesting about it:
+In this blog post I want to demonstrate why composition is a powerful tool for fighting against complexity as projects grow. It helps to break down complicated logic into easy to understand pieces.
+
+Before we get to React, here's a code snippet for a dropdown list, I'd like to know what you think is interesting or odd about it:
 
 ```javascript
 <select options={[
@@ -25,7 +27,7 @@ Before we get to React, here's a code snippet, I'd like to know what you think i
 } />
 ```
 
-Yikes! Luckily that's just made up, and in reality we can actually use the `select` element like this:
+I don't know about you, but I find that way of providing the options a bit awkward. Luckily that's just made up, and in reality we can actually use the `select` element like this:
 
 ```jsx
 <select>
@@ -162,7 +164,7 @@ This one would be a bit more complex to build than an Alert component, but the e
 When it comes to building compound components that are a bit more complex, like the Menu example or maybe an Accordion, Tabs or Modal component we will need a bit more than just passing `children` and applying some styling. We might need shared state, or a set of functions that the sub-components have access to. Here are a few patterns you might need:
 
 - Using the Context API in the parent element to store shared state
-- Using the top-level Children API (like `Children.map`, or `Children.forEach`)
+- Using the top-level [Children API](https://reactjs.org/docs/react-api.html) (like `Children.map`, or `Children.forEach`)
 
 ## Where do I go from here?
 
@@ -170,3 +172,4 @@ This post was only meant to give you a taste of what component composition can a
 
 - [React Summit 2022 talk from Thomas Findlay](https://portal.gitnation.org/contents/composition-vs-configuration-how-to-build-flexible-resilient-and-future-proof-components)
 - [Advanced React component composition](https://frontendmastery.com/posts/advanced-react-component-composition-guide)
+- Get inspiration from UI libraries like [Chakra UI](https://chakra-ui.com/docs/components) or [Reach UI](https://reach.tech)
