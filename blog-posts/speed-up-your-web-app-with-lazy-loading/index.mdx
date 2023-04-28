@@ -74,8 +74,14 @@ adf9245234.chunk.js - 39KB
 ```
 
 Those 'chunks' represent parts of our JS bundle that will only be downloaded if we actually need them. There will still be a main chunk that contains the shared code, but it will be considerably smaller than before.
+Also, those strings or random letters and numbers are hashes of the contents of the file. What's really important here, is that if the content of one file doesn't change, the hash remains the same! The reason that's so important, is that means browsers can keep using it from the cache rather than downloading them again 🥳
 
-You may be surprised, but this change, albeit a simple one, is likely to be the most impactful change we could make to improve performance (without actually removing features that is :D). If it's a low hanging fruit, let's just grab it and eat it!
+## A few other tips
+
+- Use [Bundlephobia](https://bundlephobia.com/) to factor package size into your decision-making when picking which library to choose (e.g. until a few months ago we still had moment.js in the project, which was a whopping 72KB gzipped - as a comparison, the library we use now called luxon is 21KB gzipped)
+- Ensure your bundler is configured correctly for [tree-shaking](https://webpack.js.org/guides/tree-shaking/), which helps eliminate dead code.
+
+You may be surprised, but implementing code splitting, albeit simple, is likely to be the most impactful change we could make to improve performance (without actually removing features that is :D). If it's a low hanging fruit, let's just grab it and eat it!
 
 _Note: code splitting as described here is currently being implemented on the Volunteer Hub. I will update this post with some performance metrics once it's shipped._
 
