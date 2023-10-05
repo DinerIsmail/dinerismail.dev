@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
       <NextSeo
-        title="Diner Ismail - Software Engineer, Activist, Coding Mentor"
+        title="Diner Ismail - Software Engineer, Community Tech Creator, Coding Mentor"
         description="Experienced Frontend Engineer. Using my skills to make the world a better place."
         twitter={{
           cardType: 'summary_large_image',
@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         openGraph={{
           url: 'https://dinerismail.dev',
           title:
-            'Diner Ismail - Software Engineer, Activist, Coding Mentor',
+            'Diner Ismail - Software Engineer, Community Tech Creator, Coding Mentor',
           description:
             'Experienced Frontend Engineer. Using my skills to make the world a better place.',
           locale: 'en_GB',
