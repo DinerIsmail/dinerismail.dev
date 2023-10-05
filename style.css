@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-ul {
-  list-style-position: inside;
+ul, ol {
+  list-style-position: outside;
+}
+
+ol > li, ul > li {
+  /* padding-bottom: 0 !important;
+  padding-top: 8px !important; */
+  padding-bottom: 16px !important;
 }
