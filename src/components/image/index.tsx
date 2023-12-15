@@ -1,7 +1,7 @@
-import NextImage, { ImageProps as NextImageProps } from 'next/image';
-import { chakra, ImageProps as ChakraImageProps } from '@chakra-ui/react';
+import NextImage, { ImageProps as NextImageProps } from 'next/image'
+import { chakra, ImageProps as ChakraImageProps } from '@chakra-ui/react'
 
-type Props = NextImageProps & Omit<ChakraImageProps, 'src'>;
+type Props = NextImageProps & Omit<ChakraImageProps, 'src'>
 
 const MagicImage = chakra(NextImage, {
   shouldForwardProp: (prop) =>
@@ -14,8 +14,8 @@ const MagicImage = chakra(NextImage, {
       'height',
       'priority',
     ].includes(prop),
-});
+})
 
-const Image = (props: Props) => <MagicImage {...props} />;
+const Image = (props: Props) => <MagicImage {...props} />
 
-export default Image;
+export default Image

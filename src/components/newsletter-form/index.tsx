@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react'
 import {
   chakra,
   VStack,
@@ -9,21 +9,21 @@ import {
   Text,
   Icon,
   IconButton,
-} from '@chakra-ui/react';
-import { HiOutlineMail } from 'react-icons/hi';
-import useSWR from 'swr';
+} from '@chakra-ui/react'
+import { HiOutlineMail } from 'react-icons/hi'
+import useSWR from 'swr'
 
-import fetcher from '@/utils/fetcher';
-import { Subscribers } from '@/types/subscribers';
-import { Form, FormState } from '@/types/form-state';
+import fetcher from '@/utils/fetcher'
+import { Subscribers } from '@/types/subscribers'
+import { Form, FormState } from '@/types/form-state'
 
 const NewsletterForm = () => {
-  const [form, setForm] = useState<FormState>({ state: Form.Initial });
-  const { data } = useSWR<Subscribers>('/api/newsletter/subscribers', fetcher);
+  const [form, setForm] = useState<FormState>({ state: Form.Initial })
+  const { data } = useSWR<Subscribers>('/api/newsletter/subscribers', fetcher)
 
   const subscribe = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setForm({ state: Form.Loading });
+    e.preventDefault()
+    setForm({ state: Form.Loading })
 
     const res = await fetch('/api/newsletter/subscribe', {
       body: JSON.stringify({
@@ -33,22 +33,22 @@ const NewsletterForm = () => {
         'Content-Type': 'application/json',
       },
       method: 'POST',
-    });
+    })
 
-    const { error, message } = await res.json();
+    const { error, message } = await res.json()
     if (error) {
       setForm({
         state: Form.Error,
         message: error,
-      });
-      return;
+      })
+      return
     }
 
     setForm({
       state: Form.Success,
       message,
-    });
-  };
+    })
+  }
 
   return (
     <VStack
@@ -111,7 +111,7 @@ const NewsletterForm = () => {
         </Text>
       )}
     </VStack>
-  );
-};
+  )
+}
 
-export default NewsletterForm;
+export default NewsletterForm

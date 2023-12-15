@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   LinkBox,
   LinkOverlay,
@@ -6,10 +6,10 @@ import {
   Text,
   VStack,
   HStack,
-} from '@chakra-ui/react';
-import { format } from 'timeago.js';
+} from '@chakra-ui/react'
+import { format } from 'timeago.js'
 
-import { BlogPost } from '@/types/blog-post';
+import { BlogPost } from '@/types/blog-post'
 
 const BlogPostCard = ({
   title,
@@ -19,10 +19,10 @@ const BlogPostCard = ({
   readingTime,
 }: BlogPost) => {
   return (
-    <LinkBox as='article'>
+    <LinkBox as="article">
       <VStack
-        alignItems='stretch'
-        w='full'
+        alignItems="stretch"
+        w="full"
         p={{ base: 0, md: 4 }}
         _hover={{
           bg: 'gray.100',
@@ -33,38 +33,38 @@ const BlogPostCard = ({
             bg: 'gray.700',
           },
         }}
-        rounded='md'
-        transitionDuration='slow'
-        transitionProperty='all'
-        transitionTimingFunction='ease-out'
+        rounded="md"
+        transitionDuration="slow"
+        transitionProperty="all"
+        transitionTimingFunction="ease-out"
       >
-        <VStack alignItems='flex-start'>
-          <Heading size='md'>
+        <VStack alignItems="flex-start">
+          <Heading size="md">
             <LinkOverlay as={Link} href={`/blog/${slug}`}>
               {title}
             </LinkOverlay>
           </Heading>
           <HStack
             divider={
-              <Text mx={2} color='gray.500'>
+              <Text mx={2} color="gray.500">
                 •
               </Text>
             }
           >
-            <Text color='gray.500' fontSize='sm'>
+            <Text color="gray.500" fontSize="sm">
               {format(date)}
             </Text>
-            <Text color='gray.500' fontSize='sm'>
+            <Text color="gray.500" fontSize="sm">
               {readingTime}
             </Text>
           </HStack>
         </VStack>
-        <Text color='gray.500' fontSize='sm'>
+        <Text color="gray.500" fontSize="sm">
           {description}
         </Text>
       </VStack>
     </LinkBox>
-  );
-};
+  )
+}
 
-export default BlogPostCard;
+export default BlogPostCard

@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react';
-import { IconButton } from '@chakra-ui/react';
-import { BiArrowToTop } from 'react-icons/bi';
+import { useState, useEffect } from 'react'
+import { IconButton } from '@chakra-ui/react'
+import { BiArrowToTop } from 'react-icons/bi'
 
 const ScrollToTopButton = () => {
-  const [showScrollToTop, setScrollToTop] = useState(false);
+  const [showScrollToTop, setScrollToTop] = useState(false)
 
   const updateScrollToTop = () => {
     if (window.pageYOffset > 300) {
-      setScrollToTop(true);
+      setScrollToTop(true)
     } else {
-      setScrollToTop(false);
+      setScrollToTop(false)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', updateScrollToTop);
+    window.addEventListener('scroll', updateScrollToTop)
 
     return () => {
-      window.removeEventListener('scroll', updateScrollToTop);
-    };
-  }, []);
+      window.removeEventListener('scroll', updateScrollToTop)
+    }
+  }, [])
 
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -46,7 +46,7 @@ const ScrollToTopButton = () => {
         />
       )}
     </>
-  );
-};
+  )
+}
 
-export default ScrollToTopButton;
+export default ScrollToTopButton

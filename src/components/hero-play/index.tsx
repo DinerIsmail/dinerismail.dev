@@ -1,29 +1,29 @@
-import { IconButton, Icon } from '@chakra-ui/react';
-import { HiPlay, HiStop } from 'react-icons/hi';
-import { useAudio } from 'react-use';
+import { IconButton, Icon } from '@chakra-ui/react'
+import { HiPlay, HiStop } from 'react-icons/hi'
+import { useAudio } from 'react-use'
 
 const HeroPlay = () => {
   const [audio, state, controls] = useAudio({
     src: '/assets/pronunciation.mp3',
     autoPlay: false,
-  });
+  })
 
   const play = () => {
-    controls.play();
-  };
+    controls.play()
+  }
 
   const stop = () => {
-    controls.pause();
-    controls.seek(0);
-  };
+    controls.pause()
+    controls.seek(0)
+  }
 
   const toggle = () => {
     if (state.playing) {
-      stop();
+      stop()
     } else {
-      play();
+      play()
     }
-  };
+  }
 
   return (
     <>
@@ -45,7 +45,7 @@ const HeroPlay = () => {
         variant="unstyled"
       />
     </>
-  );
-};
+  )
+}
 
-export default HeroPlay;
+export default HeroPlay

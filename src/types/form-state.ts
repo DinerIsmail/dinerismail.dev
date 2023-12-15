@@ -6,6 +6,6 @@ export enum Form {
 }
 
 export type FormState = {
-  state: Form;
-  message?: string;
-};
+  state: Form
+  message?: string
+}

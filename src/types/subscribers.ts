@@ -1,3 +1,3 @@
 export type Subscribers = {
-  count: number;
-};
+  count: number
+}

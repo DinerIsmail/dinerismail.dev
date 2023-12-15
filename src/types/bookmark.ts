@@ -1,6 +1,6 @@
 export type Bookmark = {
-  link: string;
-  title: string;
-  cover: string;
-  tags: string[];
-};
+  link: string
+  title: string
+  cover: string
+  tags: string[]
+}

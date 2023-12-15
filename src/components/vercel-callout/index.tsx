@@ -1,4 +1,4 @@
-import { Link } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react'
 
 const VercelCallout = () => {
   return (
@@ -16,7 +16,7 @@ const VercelCallout = () => {
       </span>{' '}
       Vercel
     </Link>
-  );
-};
+  )
+}
 
-export default VercelCallout;
+export default VercelCallout

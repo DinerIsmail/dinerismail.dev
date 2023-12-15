@@ -52,8 +52,8 @@ const Hero = () => {
           <HeroPlay />
         </Stack>
         <Text as="h2" lineHeight="175%">
-          I’m a frontend engineer and community tech creator building products that make the world a
-          better place. I work at{' '}
+          I’m a frontend engineer and community tech creator building products
+          that make the world a better place. I work at{' '}
           <ExternalLink href="https://olioex.com">Olio</ExternalLink> as a{' '}
           <strong>Senior Software Engineer</strong>, and I’m a{' '}
           <strong>co-founder and developer</strong> of{' '}
