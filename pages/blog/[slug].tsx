@@ -19,7 +19,6 @@ import { getBlogPosts } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
 import MDXComponents from '@/components/mdx-components'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import imageMetadata from '@/utils/plugins/image-metadata'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
 
@@ -46,13 +45,6 @@ const BlogPostPage = ({
           description,
           title: `${title} - Diner Ismail`,
           url: `https://dinerismail.dev/blog/${slug}`,
-          // images: [
-          //   {
-          //     url: `https://res.cloudinary.com/nikolovlazar/image/upload/${encodeURIComponent(
-          //       `g_north_west,l_text:calsans-semibold.ttf_72:Lazar%20Nikolov,g_north_west,x_20,y_20,co_#EDF2F7,x_330,y_208,x_330,y_208/c_fit,g_north_west,l_c_fit,g_north_west,l_text:calsans-semibold.ttf_48:${title},g_north_west,x_20,y_20,co_#718096,w_771,x_330,y_306,w_771,x_330,y_306`,
-          //     )}/blog-post-image-template_scisgq.png`,
-          //   },
-          // ],
         }}
       />
       <VStack position="relative" alignItems="stretch" w="full" spacing={8}>
