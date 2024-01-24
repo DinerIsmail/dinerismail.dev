@@ -59,7 +59,7 @@ const BlogPostCard = ({
             </Text>
           </HStack>
         </VStack>
-        <Text color="gray.500" fontSize="sm">
+        <Text color="gray.500" fontSize="md">
           {description}
         </Text>
       </VStack>

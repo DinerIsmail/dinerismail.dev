@@ -47,8 +47,8 @@ const BlogPostPage = ({
           url: `https://dinerismail.dev/blog/${slug}`,
         }}
       />
-      <VStack position="relative" alignItems="stretch" w="full" spacing={8}>
-        <VStack alignItems="flex-start" spacing={3}>
+      <VStack position="relative" alignItems="stretch" w="full">
+        <VStack alignItems="flex-start" spacing={3} mb="0.5rem">
           <Heading as="h1" size="lg">
             {title}
           </Heading>
@@ -59,11 +59,11 @@ const BlogPostPage = ({
               </Text>
             }
           >
-            <Text color="gray.500" fontSize="sm">
+            <Text color="gray.500" fontSize="md">
               {format(date)}
             </Text>
 
-            <Text color="gray.500" fontSize="sm">
+            <Text color="gray.500" fontSize="md">
               {readingTime}
             </Text>
           </HStack>

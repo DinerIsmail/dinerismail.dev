@@ -87,7 +87,7 @@ const theme = extendTheme({
   },
   fonts: {
     heading: `Cal Sans, ${base.fonts.heading}`,
-    body: `Inter, ${base.fonts.body}`,
+    body: `Source Sans Pro, ${base.fonts.body}`,
   },
   mdx: {
     h1: {

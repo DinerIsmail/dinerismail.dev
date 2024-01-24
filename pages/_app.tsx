@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import { NextSeo } from 'next-seo'
 import 'cal-sans'
+import "@fontsource/source-sans-pro/400.css"
 
 import theme from '../src/theme'
 import Layout from '@/components/layout'

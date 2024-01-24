@@ -51,7 +51,7 @@ const Hero = () => {
           </Heading>
           <HeroPlay />
         </Stack>
-        <Text as="h2" lineHeight="175%">
+        <Text as="h2" lineHeight="175%" fontSize="1.125rem" style={{ textWrap: 'balance' }}>
           I’m a frontend engineer and community tech creator building products
           that make the world a better place. I work at{' '}
           <ExternalLink href="https://olioex.com">Olio</ExternalLink> as a{' '}
