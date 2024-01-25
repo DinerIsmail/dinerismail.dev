@@ -19,7 +19,15 @@ const ChakraHighlight = chakra(Highlight, {
     ['Prism', 'theme', 'code', 'language', 'children'].includes(prop),
 })
 
-const Pre = (props) => <chakra.div my="2em" borderRadius="sm" fontSize="1.1875rem" fontFamily="monospace" {...props} />
+const Pre = (props) => (
+  <chakra.div
+    my="2em"
+    borderRadius="sm"
+    fontSize="1.1875rem"
+    fontFamily="monospace"
+    {...props}
+  />
+)
 
 const Table = (props) => (
   <chakra.div overflowX="auto">
@@ -185,7 +193,15 @@ const Anchor = (props) => (
 const MDXComponents = {
   code: CodeHighlight,
   h1: (props) => <LinkedHeading as="h1" apply="mdx.h1" {...props} />,
-  h2: (props) => <LinkedHeading as="h2" apply="mdx.h2" fontSize="2.3125rem" marginTop="3.125rem" {...props} />,
+  h2: (props) => (
+    <LinkedHeading
+      as="h2"
+      apply="mdx.h2"
+      fontSize="2.3125rem"
+      marginTop="3.125rem"
+      {...props}
+    />
+  ),
   h3: (props) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
   h4: (props) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
@@ -198,9 +214,22 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: (props) => <chakra.p apply="mdx.p" fontSize="1.3125rem" marginTop="1.25rem" {...props} />,
+  p: (props) => (
+    <chakra.p
+      apply="mdx.p"
+      fontSize="1.3125rem"
+      marginTop="1.25rem"
+      {...props}
+    />
+  ),
   ul: (props) => (
-    <chakra.ul px={{ base: 4, md: 0 }} marginTop="1.5rem" apply="mdx.ul" {...props} />
+    <chakra.ul
+      px={{ base: 4, md: 0 }}
+      apply="mdx.ul"
+      marginTop="1.5rem"
+      style={{ paddingInlineStart: '1.25rem' }}
+      {...props}
+    />
   ),
   ol: (props) => <chakra.ol apply="mdx.ul" {...props} />,
   li: (props) => <chakra.li fontSize="1.3125rem" {...props} />,

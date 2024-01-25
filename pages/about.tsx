@@ -11,7 +11,6 @@ import { BlogPost } from '@/types/blog-post'
 import { getBlogPosts } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
 import MDXComponents from '@/components/mdx-components'
-import { useRouter } from 'next/router'
 import imageMetadata from '@/utils/plugins/image-metadata'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
 
@@ -19,25 +18,22 @@ type Props = BlogPost & {
   source: MDXRemoteSerializeResult
 }
 
-const BlogPostPage = ({
+const AboutPage = ({
   title,
   description,
   date,
   source,
   readingTime,
 }: Props) => {
-  const { query } = useRouter()
-  const slug = query.slug as string
-
   return (
     <>
       <NextSeo
-        title={`${title} - Diner Ismail`}
+        title={`About Me - Diner Ismail`}
         description={description}
         openGraph={{
           description,
-          title: `${title} - Diner Ismail`,
-          url: `https://dinerismail.dev/blog/${slug}`,
+          title: `About Me - Diner Ismail`,
+          url: `https://dinerismail.dev/about`,
         }}
       />
       <VStack position="relative" alignItems="stretch" w="full">
@@ -68,19 +64,8 @@ const BlogPostPage = ({
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getBlogPosts()
-
-  return {
-    paths: posts.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
-  }
-}
-
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
-  const slug = ctx.params.slug as string
-
-  const postContent = await readBlogPost(slug)
+  const postContent = await readBlogPost('about')
   const {
     content,
     data: { title, description, date },
@@ -97,9 +82,8 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
       title,
       description,
       date,
-      slug,
     },
   }
 }
 
-export default BlogPostPage
+export default AboutPage

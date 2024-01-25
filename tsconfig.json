@@ -18,8 +18,6 @@
       "@/components/*": ["src/components/*"],
       "@/types/*": ["src/types/*"],
       "@/utils/*": ["src/utils/*"],
-      "@/db": ["db/index.ts"],
-      "@/data/*": ["data/*"]
     },
     "incremental": true
   },

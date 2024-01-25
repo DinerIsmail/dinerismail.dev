@@ -7,7 +7,7 @@ import { BlogPost } from '@/types/blog-post'
 
 export const getBlogPosts = async (): Promise<BlogPost[]> => {
   const result: BlogPost[] = []
-  const dir = path.join(process.cwd(), './blog-posts')
+  const dir = path.join(process.cwd(), './content/blog-posts')
   const blogPosts = await fs.readdir(dir)
 
   await Promise.all(
