@@ -1,8 +1,41 @@
 {
   "extends": [
-    "next/core-web-vitals",
     "diner"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["chakra-ui"]
+  "plugins": ["chakra-ui"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@components",
+            "./components/"
+          ],
+          [
+            "@hooks",
+            "./hooks/"
+          ],
+          [
+            "@helpers",
+            "./helpers/"
+          ],
+          [
+            "@store",
+            "./store/"
+          ],
+          [
+            "@styles",
+            "./styles/"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+  }
 }
