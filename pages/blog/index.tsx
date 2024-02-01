@@ -40,8 +40,9 @@ const Blog = ({ posts }: Props) => {
       <NextSeo title="Blog - Diner Ismail" />
       <VStack as="section" alignItems="flex-start" w="full" spacing={3}>
         <Heading size="md">Blog</Heading>
-        <Text fontSize="md">
-          Web development, with a focus on the React ecosystem.
+        <Text fontSize="lg">
+          A blog about web development, engineering productivity and community
+          tech.
         </Text>
         <InputGroup>
           <InputLeftElement pointerEvents="none">

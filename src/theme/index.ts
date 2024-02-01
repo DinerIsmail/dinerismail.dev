@@ -33,9 +33,6 @@ const theme = extendTheme({
       },
     },
   },
-  sizes: {
-    18: '4.5rem',
-  },
   components: {
     Heading: {
       baseStyle: {

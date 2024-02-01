@@ -13,6 +13,9 @@ const Footer = () => {
             alt="Codementor badge"
             height="100"
             width="150"
+            style={{
+              borderRadius: '10px',
+            }}
           />
         </a>
         <a href="https://www.buymeacoffee.com/diner">

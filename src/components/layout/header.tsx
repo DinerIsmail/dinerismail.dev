@@ -1,35 +1,18 @@
-import {
-  HStack,
-  Heading,
-  IconButton,
-  Link,
-  Tooltip,
-  Container,
-} from '@chakra-ui/react'
+import { HStack, Heading, Link, Container, Stack } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { useContext, useEffect, useState } from 'react'
-import { FiCommand } from 'react-icons/fi'
 
 const Header = () => {
-  const [shortcut, setShortcut] = useState<string>()
-
-  useEffect(() => {
-    setShortcut(
-      navigator.userAgent.indexOf('Mac OS X') != -1 ? 'Cmd + K' : 'Ctrl + K',
-    )
-  }, [setShortcut])
-
   return (
     <HStack
       as="nav"
       position="sticky"
       zIndex="popover"
-      top={0}
       alignItems="center"
       justifyContent="space-between"
       w="full"
-      mb={16}
-      py={3}
+      mt="1rem"
+      mb="4rem"
+      py="0.75rem"
       bg="white"
       _dark={{
         bg: 'gray.800',
@@ -41,15 +24,40 @@ const Header = () => {
       <Container
         alignItems="center"
         justifyContent="space-between"
-        display="flex"
+        display={{ sm: 'flex-wrap', md: 'flex' }}
         maxW="container.md"
         px={{ base: 4, lg: 0 }}
       >
-        <Heading size="md">
-          <Link as={NextLink} href="/">
+        <Heading size="md" mb="0.5rem">
+          <Link
+            as={NextLink}
+            href="/"
+            className="header-link"
+            fontSize="1.5rem"
+          >
             Diner Ismail
           </Link>
         </Heading>
+        <Stack direction="row" gap="2rem">
+          <Link
+            as={NextLink}
+            href="/blog"
+            className="header-link"
+            fontSize="1.5rem"
+            fontWeight="700"
+          >
+            Blog
+          </Link>
+          <Link
+            as={NextLink}
+            href="/bookmarks"
+            className="header-link"
+            fontSize="1.5rem"
+            fontWeight="700"
+          >
+            Bookmarks
+          </Link>
+        </Stack>
       </Container>
     </HStack>
   )

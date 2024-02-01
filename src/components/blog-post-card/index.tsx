@@ -51,15 +51,15 @@ const BlogPostCard = ({
               </Text>
             }
           >
-            <Text color="gray.500" fontSize="sm">
+            <Text color="gray.500" fontSize="md">
               {format(date)}
             </Text>
-            <Text color="gray.500" fontSize="sm">
+            <Text color="gray.500" fontSize="md">
               {readingTime}
             </Text>
           </HStack>
         </VStack>
-        <Text color="gray.500" fontSize="md">
+        <Text color="gray.500" fontSize="lg">
           {description}
         </Text>
       </VStack>
