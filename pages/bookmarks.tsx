@@ -11,6 +11,11 @@ type Props = Omit<BlogPost, 'readingTime' | 'date'> & {
 
 const links = [
   {
+    label: 'What I Wish Someone Had Told Me',
+    url: 'https://blog.samaltman.com/what-i-wish-someone-had-told-me',
+    description: 'Article by Sam Altman',
+  },
+  {
     label: 'Consistency matters.',
     url: 'https://addyo.substack.com/p/consistency-matters',
     description: 'Article by Addy Osmani',
