@@ -25,6 +25,11 @@ const links = [
     url: 'https://www.youtube.com/watch?v=OlPO8f-AAJk',
     description: 'Video by Ali Abdaal',
   },
+  {
+    label: 'Advice to Young People, The Lies I Tell Myself',
+    url: 'https://jxnl.co/writing/2024/06/01/advice-to-young-people/#self-talk',
+    description: 'Article by Jason Liu',
+  },
 ]
 
 const BookmarksPage = ({ title, description, source }: Props) => {
