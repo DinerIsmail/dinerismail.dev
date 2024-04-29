@@ -96,7 +96,7 @@ const theme = extendTheme({
       letterSpacing: '0.8px',
     },
     h3: {
-      fontSize: 'md',
+      fontSize: 'lg',
       letterSpacing: '0.6px',
     },
     h4: {

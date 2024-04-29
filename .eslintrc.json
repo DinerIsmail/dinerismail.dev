@@ -9,22 +9,6 @@
       "alias": {
         "map": [
           [
-            "@components",
-            "./components/"
-          ],
-          [
-            "@hooks",
-            "./hooks/"
-          ],
-          [
-            "@helpers",
-            "./helpers/"
-          ],
-          [
-            "@store",
-            "./store/"
-          ],
-          [
             "@styles",
             "./styles/"
           ]

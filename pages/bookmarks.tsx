@@ -56,7 +56,7 @@ const BookmarksPage = ({ title, description, source }: Props) => {
         </Text>
         {links.map((link) => {
           return (
-            <Link href={link.url}>
+            <Link href={link.url} key={link.url}>
               <Box mb="1.25rem">
                 <Heading as="h3" fontSize="xl">
                   {link.label}

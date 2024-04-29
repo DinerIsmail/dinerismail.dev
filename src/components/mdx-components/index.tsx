@@ -202,7 +202,15 @@ const MDXComponents = {
       {...props}
     />
   ),
-  h3: (props) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
+  h3: (props) => (
+    <LinkedHeading
+      as="h3"
+      apply="mdx.h3"
+      fontSize="1.5rem"
+      marginTop="2rem"
+      {...props}
+    />
+  ),
   h4: (props) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,

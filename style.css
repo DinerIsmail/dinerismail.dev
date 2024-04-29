@@ -40,12 +40,18 @@ ul, ol {
   list-style-position: outside;
 }
 
-ol > li, ul > li {
+ol > li:not(:last-of-type), ul > li:not(:last-of-type) {
   padding-bottom: 16px !important;
 }
 
 p {
   font-size: 21px;
+}
+
+blockquote {
+  p {
+    margin-top: 0 !important;
+  }
 }
 
 .header-link:focus {
