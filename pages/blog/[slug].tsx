@@ -14,6 +14,7 @@ import MDXComponents from '@/components/mdx-components'
 import { useRouter } from 'next/router'
 import imageMetadata from '@/utils/plugins/image-metadata'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
+import SignupForm from '@/components/signup-form'
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult
@@ -65,6 +66,7 @@ const BlogPostPage = ({
         <MDXRemote {...source} components={MDXComponents} />
       </VStack>
       <ScrollToTopButton />
+      <SignupForm />
     </>
   )
 }

@@ -58,3 +58,60 @@ blockquote {
   outline: none;
   box-shadow: none !important;
 }
+
+.ck {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+@media (width > 650px) {
+  .ck {
+    flex-direction: row;
+  }
+}
+
+.ck input,
+.ck button {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ck input {
+  font-size: 1.125rem;
+}
+
+.ck button {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(255 255 255 / 90%);
+  border-radius: 16px;
+  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  background-size: 600%;
+  animation: animate-gradient 12s linear infinite;
+}
+
+.ck button:hover {
+  transform: scale(1.02);
+  transition-duration: 200ms;
+}
+
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
