@@ -4,11 +4,11 @@ description: Building good software doesn't need to take that long.
 date: Apr 29, 2024
 ---
 
-I've been building this as the (almost) sole developer alongside a lovely team of volunteers from Cambridge, and we've recently incorporated as CIC (Community Interest Company), received a grant from Transition Together and we have big plans ahead for 2024 and further.
-
 For more than three years I've been steadily working on building an [open-source](https://github.com/ResilienceWeb/resilience-web) platform called [Resilience Web](https://resilienceweb.org.uk) that aims to help with the discovery, collaboration and communication between activists and groups in a local area.
 
-In this post I want to share how I built this platform, the challenges I've gone through as well as my learnings from the process.
+I've been building this as the (almost) sole developer alongside a lovely team of volunteers from Cambridge, and we've recently incorporated as CIC (Community Interest Company), received a grant from Transition Together and we have big plans ahead for 2024 and further.
+
+In this post I want to share how I built this platform, the challenges I overcame as well as my learnings from the process.
 
 ## 🌳 What is the Resilience Web?
 
@@ -40,7 +40,7 @@ I also use Chakra UI as a component library and styling method. I find the addit
 
 Having picked Next.js as the framework, I am also using the Next.js API Routes feature which run on serverless functions, which together represent the API.
 
-Most of the API routes interact with a Postgresql database hosted on Digital Ocean. I use Prisma the data model, to manage migrations and to run queries. I'm finding Prisma very helpful at this point, as it makes it a breeze to run the migrations and write type-safe queries.
+Most of the API routes interact with a Postgresql database hosted on Digital Ocean. I use Prisma to create the data model, to manage migrations and to run queries. I'm finding Prisma very helpful at this point, as it makes it a breeze to run the migrations and write type-safe queries.
 
 ### 🌐 Hosting
 
