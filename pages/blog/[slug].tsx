@@ -15,6 +15,7 @@ import { useRouter } from 'next/router'
 import imageMetadata from '@/utils/plugins/image-metadata'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
 import SignupForm from '@/components/signup-form'
+import SocialShare from '@/components/social-share'
 
 type Props = BlogPost & {
   source: MDXRemoteSerializeResult
@@ -29,6 +30,7 @@ const BlogPostPage = ({
 }: Props) => {
   const { query } = useRouter()
   const slug = query.slug as string
+  const url = `https://dinerismail.dev/blog/${slug}`
 
   return (
     <>
@@ -38,7 +40,7 @@ const BlogPostPage = ({
         openGraph={{
           description,
           title: `${title} - Diner Ismail`,
-          url: `https://dinerismail.dev/blog/${slug}`,
+          url,
         }}
       />
       <VStack position="relative" alignItems="stretch" w="full">
@@ -66,6 +68,7 @@ const BlogPostPage = ({
         <MDXRemote {...source} components={MDXComponents} />
       </VStack>
       <ScrollToTopButton />
+      <SocialShare url={url} description={description} />
       <SignupForm />
     </>
   )

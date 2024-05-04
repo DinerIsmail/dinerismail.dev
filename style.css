@@ -59,6 +59,7 @@ blockquote {
   box-shadow: none !important;
 }
 
+/* -------------- Signup form --------------- */
 .ck {
   display: flex;
   flex-direction: column;
@@ -84,6 +85,10 @@ blockquote {
 
 .ck input {
   font-size: 1.125rem;
+  color-scheme: initial;
+  color: black;
+
+  --chakra-colors-chakra-placeholder-color: rgb(97, 94, 94);
 }
 
 .ck button {
