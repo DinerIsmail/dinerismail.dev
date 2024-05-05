@@ -57,7 +57,7 @@ const Hero = () => {
           fontSize="1.125rem"
           style={{ textWrap: 'balance' }}
         >
-          I’m a frontend engineer and community tech creator building products
+          I’m a software engineer and community tech creator building products
           that make the world a better place. I work at{' '}
           <ExternalLink href="https://olioex.com">Olio</ExternalLink> as a{' '}
           <strong>Senior Software Engineer</strong>, and I’m a{' '}
