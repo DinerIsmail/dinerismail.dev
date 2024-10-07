@@ -5,6 +5,7 @@ import {
   Link,
   HTMLChakraProps,
   Kbd,
+  Heading,
   useColorModeValue,
 } from '@chakra-ui/react'
 import NextImage from 'next/image'
@@ -148,38 +149,6 @@ const CodeHighlight = ({ children: codeString, className: language }: any) => {
   )
 }
 
-const LinkedHeading = (props: HTMLChakraProps<'h2'>) => {
-  const slug = slugify(props.children as string, { lower: true })
-  return (
-    <Link alignItems="flex-end" display="flex" href={`#${slug}`} role="group">
-      <Box
-        {...props}
-        display="inline"
-        color="gray.700"
-        fontFamily="heading"
-        _dark={{
-          color: 'white',
-        }}
-      >
-        {props.children}
-      </Box>
-      <chakra.span
-        aria-label="anchor"
-        color="purple.500"
-        userSelect="none"
-        fontWeight="normal"
-        outline="none"
-        _focus={{ opacity: 1, boxShadow: 'outline' }}
-        opacity={0}
-        _groupHover={{ opacity: 1 }}
-        ml="0.375rem"
-      >
-        #
-      </chakra.span>
-    </Link>
-  )
-}
-
 const Image = (props) => {
   return (
     <NextImage {...props} layout="responsive" loading="lazy" quality={100} />
@@ -192,9 +161,9 @@ const Anchor = (props) => (
 
 const MDXComponents = {
   code: CodeHighlight,
-  h1: (props) => <LinkedHeading as="h1" apply="mdx.h1" {...props} />,
+  h1: (props) => <Heading as="h1" apply="mdx.h1" {...props} />,
   h2: (props) => (
-    <LinkedHeading
+    <Heading
       as="h2"
       apply="mdx.h2"
       fontSize="2.3125rem"
@@ -203,7 +172,7 @@ const MDXComponents = {
     />
   ),
   h3: (props) => (
-    <LinkedHeading
+    <Heading
       as="h3"
       apply="mdx.h3"
       fontSize="1.5rem"
@@ -211,7 +180,7 @@ const MDXComponents = {
       {...props}
     />
   ),
-  h4: (props) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
+  h4: (props) => <Heading as="h4" apply="mdx.h4" {...props} />,
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   pre: Pre,
@@ -226,7 +195,7 @@ const MDXComponents = {
     <chakra.p
       apply="mdx.p"
       fontSize="1.3125rem"
-      marginTop="1.25rem"
+      marginTop="0.75rem"
       {...props}
     />
   ),

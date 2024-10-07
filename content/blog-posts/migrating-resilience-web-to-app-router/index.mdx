@@ -36,18 +36,29 @@ When the App Router was first announced by the Next.js team and I read the docs 
 
 However, when I started working on this migration and updated the first couple of pages it didn't take me very long to wrap my head around how things work now. I guess I just needed to play around with actual code rather than just reading about it.
 
-## Learning: Importance of preview environment working for testing before deployment
+## Learnings
+
+### Importance of preview environment working for testing before deployment
 
 I don't have a staging environment for the Resilience Web as it would increase the hosting costs significantly. However, Vercel offers preview deployments for free for every Git branch so I could make use of that - but I don't 😅 there are some issues I need to fix first but I've been putting them off.
 
 Having a preview environment would've helped me find some issues and fix them so I don't have to investigate bugs in production.
 
-## Other things
+### Error monitoring was crucial
 
-- Better use of Browser APIs in API endpoints and in components
-- Sentry and Vercel logs were very useful because Next.js doesn't propagate server errors to the browser. I had quite a few errors when I first deployed:
+Sentry and Vercel logs were very useful because Next.js doesn't propagate server errors to the browser. I had quite a few errors when I first deployed:
 
 <img src="/assets/images/blog-posts/sentry-app-router.png" />
+
+### Builds are slower & Turbopack is still not ready 😑
+
+One of my main frustrations is the slower build times. I was hoping that Turbopack will work well with the App Router but it keeps throwing tantrums and cryptic errors, sometimes completely blowing up for no apparent reason.
+
+By default Next.js uses Webpack, which is the reason why the build times are so slow. To be honest I wish Next.js just migrated to using Vite, like many other frameworks do now but I understand it's not that simple to switch.
+
+## Conclusion
+
+I'm happy with the migration and I think it was worth the effort. Next.js is a great framework and the App Router is a great addition to it. I'm very curious to see how Next.js will evolve in the next major version and with React 19 coming out. However, I will definitely keep an eye on the other frameworks as well, especially Remix and Astro.
 
 ## Useful links
 
