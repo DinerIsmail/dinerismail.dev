@@ -46,7 +46,7 @@ const BlogPostPage = ({
       <VStack position="relative" alignItems="stretch" w="full">
         <VStack alignItems="flex-start" spacing={3} mb="0.5rem">
           {/* @ts-ignore */}
-          <Heading as="h1" size="lg" textWrap="pretty">
+          <Heading as="h1" size="lg" textwrap="pretty">
             {title}
           </Heading>
           <HStack
