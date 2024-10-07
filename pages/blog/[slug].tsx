@@ -12,7 +12,6 @@ import { getBlogPosts } from '@/utils/get-blog-posts'
 import { readBlogPost } from '@/utils/read-blog-post'
 import MDXComponents from '@/components/mdx-components'
 import { useRouter } from 'next/router'
-import imageMetadata from '@/utils/plugins/image-metadata'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
 import SignupForm from '@/components/signup-form'
 import SocialShare from '@/components/social-share'
@@ -94,11 +93,7 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
 
   return {
     props: {
-      source: await serialize(content, {
-        mdxOptions: {
-          rehypePlugins: [imageMetadata],
-        },
-      }),
+      source: await serialize(content),
       readingTime: readingTime(content).text,
       title,
       description,
