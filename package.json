@@ -39,7 +39,7 @@
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/parser": "8.8.1",
     "eslint": "8.57.0",
-    "eslint-config-diner": "1.0.7",
+    "eslint-config-diner": "1.0.8",
     "eslint-config-next": "14.2.14",
     "eslint-plugin-chakra-ui": "0.11.0",
     "prettier": "3.3.3",
