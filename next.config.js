@@ -1,7 +1,16 @@
 const moduleExports = {
   swcMinify: true,
   images: {
-    domains: ['img.youtube.com', 'opengraph.githubassets.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'opengraph.githubassets.com'
+      },
+    ]
   },
   async redirects() {
     return [
