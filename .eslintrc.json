@@ -4,22 +4,5 @@
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["chakra-ui"],
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [
-          [
-            "@styles",
-            "./styles/"
-          ]
-        ],
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    },
-  }
+  "settings": {}
 }
