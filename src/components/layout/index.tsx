@@ -4,7 +4,7 @@ import { VStack, Container } from '@chakra-ui/react'
 import Header from './header'
 import Footer from './footer'
 
-type Props = PropsWithChildren<{}>
+type Props = PropsWithChildren
 
 const Layout = ({ children }: Props) => {
   return (
