@@ -1,6 +1,6 @@
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { NextSeo } from 'next-seo'
-import { Box, Link, VStack, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Link, VStack, Heading, Text } from '@chakra-ui/react'
 
 import { BlogPost } from '@/types/blog-post'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
@@ -10,6 +10,11 @@ type Props = Omit<BlogPost, 'readingTime' | 'date'> & {
 }
 
 const links = [
+  {
+    label: 'An Unreasonable Amount of Time',
+    url: 'https://www.youtube.com/watch?v=eDr6_cMtfdA',
+    description: 'Article by Allen Pike',
+  },
   {
     label: 'What I Wish Someone Had Told Me',
     url: 'https://blog.samaltman.com/what-i-wish-someone-had-told-me',
