@@ -12,7 +12,7 @@ type Props = Omit<BlogPost, 'readingTime' | 'date'> & {
 const links = [
   {
     label: 'An Unreasonable Amount of Time',
-    url: 'https://www.youtube.com/watch?v=eDr6_cMtfdA',
+    url: 'https://allenpike.com/2024/an-unreasonable-amount-of-time',
     description: 'Article by Allen Pike',
   },
   {
