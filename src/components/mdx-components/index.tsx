@@ -2,14 +2,11 @@ import {
   Alert,
   Box,
   chakra,
-  Link,
-  HTMLChakraProps,
   Kbd,
   Heading,
   useColorModeValue,
 } from '@chakra-ui/react'
 import NextImage from 'next/image'
-import slugify from 'slugify'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'

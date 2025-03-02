@@ -12,7 +12,7 @@ const moduleExports = {
       },
     ]
   },
-  async redirects() {
+  redirects() {
     return [
       {
         source: '/github',

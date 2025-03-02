@@ -3,6 +3,5 @@
     "diner"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["chakra-ui"],
   "settings": {}
 }

@@ -37,7 +37,7 @@ const links = [
   },
 ]
 
-const BookmarksPage = ({ title, description, source }: Props) => {
+const BookmarksPage = ({ description }: Props) => {
   return (
     <>
       <NextSeo
