@@ -13,7 +13,7 @@ import { readBlogPost } from '@/utils/read-blog-post'
 import MDXComponents from '@/components/mdx-components'
 import { useRouter } from 'next/router'
 import ScrollToTopButton from '@/components/scroll-to-top-button'
-import SignupForm from '@/components/signup-form'
+// import SignupForm from '@/components/signup-form'
 import SocialShare from '@/components/social-share'
 
 type Props = BlogPost & {
@@ -68,7 +68,7 @@ const BlogPostPage = ({
       </VStack>
       <ScrollToTopButton />
       <SocialShare url={url} description={description} />
-      <SignupForm />
+      {/* <SignupForm /> */}
     </>
   )
 }

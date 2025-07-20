@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { chakra, Stack, HStack, VStack, Divider, Text } from '@chakra-ui/react'
 
-import VercelCallout from '../vercel-callout'
-
 const Footer = () => {
   return (
     <VStack as="footer" alignItems="flex-start" pb={8} spacing={8}>
@@ -40,7 +38,6 @@ const Footer = () => {
           © <chakra.span as="time">{new Date().getFullYear()}</chakra.span>{' '}
           Diner Ismail
         </Text>
-        <VercelCallout />
       </Stack>
     </VStack>
   )

@@ -4,7 +4,7 @@ import Hero from '@/components/hero'
 import { getRecentBlogPosts } from '@/utils/get-blog-posts'
 import { BlogPost } from '@/types/blog-post'
 import BlogpostsSection from '@/components/blogposts-section'
-import SignupForm from '@/components/signup-form'
+// import SignupForm from '@/components/signup-form'
 
 type Props = {
   posts: BlogPost[]
@@ -15,7 +15,7 @@ const IndexPage = ({ posts }: Props) => {
     <>
       <Hero />
       <BlogpostsSection posts={posts} />
-      <SignupForm />
+      {/* <SignupForm /> */}
     </>
   )
 }
