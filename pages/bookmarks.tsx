@@ -16,11 +16,6 @@ const links = [
     description: 'Article by Allen Pike',
   },
   {
-    label: 'What I Wish Someone Had Told Me',
-    url: 'https://blog.samaltman.com/what-i-wish-someone-had-told-me',
-    description: 'Article by Sam Altman',
-  },
-  {
     label: 'Consistency matters.',
     url: 'https://addyo.substack.com/p/consistency-matters',
     description: 'Article by Addy Osmani',
@@ -34,6 +29,11 @@ const links = [
     label: 'Advice to Young People, The Lies I Tell Myself',
     url: 'https://jxnl.co/writing/2024/06/01/advice-to-young-people/#self-talk',
     description: 'Article by Jason Liu',
+  },
+  {
+    label: 'Building Software is Sisyphean Work',
+    url: 'https://fragmentsofcode.substack.com/p/building-software-is-sisyphean-work',
+    description: 'Article by Alex Kondov',
   },
 ]
 
